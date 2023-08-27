@@ -135,3 +135,74 @@ print(df['z'])
 ```
 2
 ```
+## Key/value objects in Series
+- You can also use a key/value object, like a dictionary, when creating a Series.
+### Example:
+- Program:
+```
+import pandas as pd
+a={'day1':420,'day2':380,'day3':390}
+df=pd.Series(a)
+print(df)
+```
+- Output:
+```
+day1    420
+day2    380
+day3    390
+dtype: int64
+```
+### Note: The keys of the dictionary become the labels.
+- To select only some of the items in the dictionary, use the index argument and specify only the items you want to include in the Series.
+### Example:
+- Program:
+```
+import pandas as pd
+a={'day1':420,'day2':380,'day3':390}
+df=pd.Series(a,index=['day1','day2'])
+print(df)
+```
+- Output:
+```
+day1    420
+day2    380
+dtype: int64
+```
+## Pandas DataFrames
+- Data sets in Pandas are usually multi-dimensional tables, called DataFrames.
+- Series is like a column, a DataFrame is the whole table.
+### Example:
+- Program:
+```
+import pandas as pd
+data={
+	'calories':[420,380,390],
+    'duration':[50,40,45]
+}
+df=pd.DataFrame(data)
+print(df)
+```
+- Output:
+```
+   calories  duration
+0       420        50
+1       380        40
+2       390        45
+```
+### Note: Compare the Series and the DataFrame.
+- Program:
+```
+import pandas as pd
+data={
+	'calories':[420,380,390],
+    'duration':[50,40,45]
+}
+df=pd.Series(data)
+print(df)
+```
+- Output:
+```
+calories    [420, 380, 390]
+duration       [50, 40, 45]
+dtype: object
+```
