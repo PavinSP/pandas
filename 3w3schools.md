@@ -1,4 +1,4 @@
-# Pandas Read JSON
+# Pandas Read JSON (JavaScripy Object Notation)
 - Big data sets are often stored, or extracted as JSON.
 - JSON is plain text, but has the format of an object, and is well known in the world of programming, including Pandas.
 - In our examples we will be using a JSON file called 'data.json'.
@@ -208,3 +208,5 @@ print(df)
 4        45    117       148     406.0
 5        60    102       127     300.5
 ```
+## Note: 
+- Generally speaking, CSV should be chosen if the data is simple, flat, and tabular, and you are working with common software and languages. JSON should be chosen if the data is complex, nested, and object-oriented, and you are working with web applications and APIs.
